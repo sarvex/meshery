@@ -90,26 +90,30 @@ Meshery keeps the implementation of Remote Providers separate so that they are b
 Interwoven into Meshery’s web-based, user interface are a variety of extension points. Each extension point is carefully carved out to afford a seamless user experience. Each extension point is identified by a name and type. The following Meshery UI extension points are available:
 
 - **Name:** "navigator"
-  **Type:** Menu Items  
-  **Description:** This is supposed to be a full page extension which will get a dedicated endpoint in the meshery UI. And will be listed in the meshery UI’s navigator/sidebar. Menu items may refer to full page extensions.
+  **Type:** Full Page(s) and Menu Item(s)
+  **Description:** This extension allows one or more menu items to be displayed in Meshery UI's "navigator" menu (left hand side menu). Each menu item allows a full page extension each with their own dedicated endpoint to be dynamically incorporated in Meshery UI. Menu items may refer to different full page extensions.
 
 - **Name:** "user_prefs"
   **Type:** Single Component  
-  **Description:** This is supposed to be remote react components which will get placed in a pre-existing page and will not have a dedicated endpoint. As of now, the only place where this extension can be loaded is the “User Preference” section under meshery settings.
+  **Description:** Remote react components which will get placed in a pre-existing page and will not have a dedicated endpoint. This single component extension is dedicated to the “User Preference” section under "Settings" in Meshery UI.
 
 - **Name:** "Account"
-  **Type:** Full Page
-  **Description:** Remote Reactjs components (or other) are placed in a pre-existing page and will have dedicated endpoint: `/extension/account`.
+  **Type:** Full Page(s); Single Menu Item
+  **Description:** This extension allows one or more menu items to be displayed in Meshery UI's "User" menu (top, right-hand side menu). A single menu item entitled "Account" will be displayed. Remote Providers may incorporate one or more remote Reactjs components (or other) are into this pre-existing Accounts page. Endpoints for each respective menu item will be located at endpoint: `/extension/<endpoint-name>`. Additional menu items and endpoints may be added within this extension point and will be automatically incoporated by Meshery Server/UI.
 
 - **Name:** /extension/\<your name here>  
   **Type:** Full Page  
-  **Description:** The Provider package is unzipped into Meshery server filesystem under `/app/provider-pkg/<package-name>`.
+  **Description:** The Provider package is unzipped into Meshery Server filesystem under `/app/provider-pkg/<package-name>`.
 
-Remote Providers must fulfill the following endpoints:
+Remote Providers _MUST_ fulfill the following endpoints:
 
 1. `/login` - return valid token
 1. `/logout` - invalidating token
 1. `/capabilities` - return capabilities.json
+
+Remote Providers _MAY_ fulfill the following endpoints:
+
+1. `/extension/<custom-endpoint-name>/<another-custom-name/...`
 
 ## UI Extension Points
 
@@ -121,7 +125,11 @@ The UserPrefs extension point expects and loads a component to be displayed into
 
 ### Navigator
 
-The Navigator extension point loads a set of menu items to be displayed in the menu bar on the left hand side of the Meshery UI.
+The Navigator extension point loads a set of menu items to be displayed in the menu bar on the left hand side of Meshery UI.
+
+### Account
+
+The Account extension point loads a single of menu item to be displayed in the menu bar on the top, right-hand side of Meshery UI.
 
 ## Capabilities Endpoint Example
 
@@ -222,4 +230,3 @@ Offering out-of-tree support for Meshery extensions means that:
 1. liability to Meshery’s stability is significantly reduced, avoiding potential bugs in extended components.
 
 Through clearly defined extension points, Meshery extensions may be offered as closed source capabilities that plug into open source Meshery code. To facilitate integration of your Meshery extensions, you might automate the building and releasing of your separate, but interdependent code repositories. You will be responsible for sustaining both your ReactJS and Golang-based extensions.
-
