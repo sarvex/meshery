@@ -5,7 +5,7 @@ go 1.19
 replace (
 	github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.9.3
 	github.com/docker/docker => github.com/moby/moby v20.10.17+incompatible
-	github.com/docker/libcompose => github.com/docker/libcompose v0.4.1-0.20190808084053-143e0f3f1ab9
+	github.com/docker/libcompose => github.com/docker/libcompose v0.4.1-0.20210616120443-2a046c0bdbf2
 	github.com/go-openapi/runtime => github.com/go-openapi/runtime v0.19.31
 	github.com/go-openapi/strfmt => github.com/go-openapi/strfmt v0.20.2
 	github.com/kubernetes/kompose => github.com/meshery/kompose v1.0.1 // do not upgrade until https://github.com/meshery/kompose/pull/3 has been merged

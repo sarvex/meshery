@@ -995,6 +995,8 @@ github.com/docker/go-units v0.5.0 h1:69rxXcBk27SvSaaxTtLh/8llcHD8vYHT7WSdRZ/jvr4
 github.com/docker/go-units v0.5.0/go.mod h1:fgPhTUdO+D/Jk86RDLlptpiXQzgHJF7gydDDbaIK4Dk=
 github.com/docker/libcompose v0.4.1-0.20190808084053-143e0f3f1ab9 h1:Z+aRYtQXR6iFSAnoaAq/dUTcZvL1ph8uWlsrmfIP8Bs=
 github.com/docker/libcompose v0.4.1-0.20190808084053-143e0f3f1ab9/go.mod h1:YZ/h8H7gZ7/SOoviPEvSYgHomvbB82iyHvGXLVTNFwQ=
+github.com/docker/libcompose v0.4.1-0.20210616120443-2a046c0bdbf2 h1:VKKw04Tw/5ZqOmDfO7IJdddZIi8pEDL7J30PkK6lH9I=
+github.com/docker/libcompose v0.4.1-0.20210616120443-2a046c0bdbf2/go.mod h1:YZ/h8H7gZ7/SOoviPEvSYgHomvbB82iyHvGXLVTNFwQ=
 github.com/docker/libtrust v0.0.0-20150114040149-fa567046d9b1/go.mod h1:cyGadeNEkKy96OOhEzfZl+yxihPEzKnqJwvfuSUqbZE=
 github.com/docker/libtrust v0.0.0-20160708172513-aabc10ec26b7 h1:UhxFibDNY/bfvqU5CAUmr9zpesgbU6SWc8/B4mflAE4=
 github.com/docker/libtrust v0.0.0-20160708172513-aabc10ec26b7/go.mod h1:cyGadeNEkKy96OOhEzfZl+yxihPEzKnqJwvfuSUqbZE=
