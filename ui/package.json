@@ -143,7 +143,7 @@
     "nodemon": "^2.0.20",
     "nyc": "^15.1.0",
     "relay-compiler": "^15.0.0",
-    "start-server-and-test": "^1.13.1",
+    "start-server-and-test": "^2.0.3",
     "webpack": "^5.76.0",
     "webpack-cli": "^5.1.4"
   }
